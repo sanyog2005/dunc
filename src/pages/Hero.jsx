@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { ArrowRight, Github, Twitter, Linkedin, Cpu, Shield, Zap, X, ExternalLink, Terminal, Command, Radio } from 'lucide-react';
-import Lenis from '@studio-freight/lenis';
+import { ReactLenis, useLenis } from 'lenis/react';
 import logo from '../assets/U.png';
 
 // --- ENGINE: SMOOTH SCROLL & PHYSICS ---
