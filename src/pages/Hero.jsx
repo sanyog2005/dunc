@@ -1,18 +1,10 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { ArrowRight, Github, Twitter, Linkedin, Cpu, Shield, Zap, X, ExternalLink, Terminal, Command, Radio } from 'lucide-react';
-import { ReactLenis, useLenis } from 'lenis/react';
-import logo from '../assets/U.png';
+import logo from '../assets/logo.png';
 
 // --- ENGINE: SMOOTH SCROLL & PHYSICS ---
-const useSmoothScroll = () => {
-  useEffect(() => {
-    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), orientation: 'vertical', gestureOrientation: 'vertical', smoothWheel: true });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
-    return () => lenis.destroy();
-  }, []);
-};
+
 
 const HeroImage = () => {
   const { scrollYProgress } = useScroll();
@@ -99,7 +91,6 @@ const MatrixBackground = () => {
 };
 
 const Home = () => {
-  useSmoothScroll();
   const [selectedProject, setSelectedProject] = useState(null);
   const { scrollYProgress } = useScroll();
   const heroTextY = useTransform(scrollYProgress, [0, 0.3], [0, -100]);
