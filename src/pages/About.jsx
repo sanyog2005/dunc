@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+import Footer from './Footer';
 
 const About = () => {
   const containerRef = useRef(null);
@@ -140,7 +141,10 @@ const About = () => {
           <h2 className="text-7xl md:text-9xl font-black uppercase opacity-20">Repeat</h2>
         </motion.div>
       </section>
+      {/* --- ULTRA FOOTER --- */}
+      <Footer />
     </motion.main>
+    
   );
 };
 

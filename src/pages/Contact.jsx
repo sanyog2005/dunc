@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, MapPin, Mail, Phone, Globe, ShieldCheck, Activity, Zap } from 'lucide-react';
+import Footer from './Footer';
 
 const Contact = () => {
   const [status, setStatus] = useState("SYSTEM_IDLE");
@@ -126,17 +127,7 @@ const Contact = () => {
       </div>
 
       {/* --- FOOTER: DATA SUMMARY --- */}
-      <footer className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-mono uppercase tracking-[0.4em] text-zinc-600">
-        <div className="flex gap-10">
-          <p>© 2026 DUNC_SOLUTIONS // ALL_RIGHTS_RESERVED</p>
-          <p className="hidden md:block text-zinc-800">Designed for Intelligence</p>
-        </div>
-        <div className="flex gap-8">
-          {['LinkedIn', 'Twitter', 'Github'].map(link => (
-            <a key={link} href="#" className="hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">{link}</a>
-          ))}
-        </div>
-      </footer>
+      <Footer/>
     </motion.main>
   );
 };
